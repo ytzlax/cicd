@@ -18,9 +18,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Setup GIT
-        run: |
-          git config user.email "ytzlax@gmail.com"
-          git config user.name "ytzlax"    
+      run: |
+        git config user.email "ytzlax@gmail.com"
+        git config user.name "ytzlax"    
     - name: npm install, build, and test
       run: |
         npm ci
