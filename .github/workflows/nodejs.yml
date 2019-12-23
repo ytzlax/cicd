@@ -21,9 +21,9 @@ jobs:
       run: |
         git config user.email "ytzlax@gmail.com"
         git config user.name "ytzlax"    
-    - name: npm install, build, and test
+    - name: npm version
       run: |
         npm version patch
-        git push https://ytzlax:5aa9a1e6e20140a141e9658b99e1a95c56be102d@github.com/ytzlax/cicd.git
+        git push
       env:
         CI: true
