@@ -24,6 +24,6 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm version patch
-        git push
+        git push origin HEAD:cicd
       env:
         CI: true
