@@ -24,5 +24,7 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm version patch
+        git commit -m"version patch"
+        git push
       env:
         CI: true
