@@ -24,7 +24,6 @@ jobs:
     - name: npm version
       run: |
         npm version patch
-        git remote add origin https://github.com/ytzlax/cicd.git
         git push -u origin master
       env:
         CI: true
