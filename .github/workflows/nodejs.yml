@@ -12,21 +12,21 @@ jobs:
         node-version: [8.x]
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: Setup GIT
-      run: |
-        git config user.email "ytzlax@gmail.com"
-        git config user.name "ytzlax"    
-    - name: npm version
-      run: |
-        npm version patch
-     - name: git push
-       run: |
-        git commit -m "message"
-        git push  origin master
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Setup GIT
+        run: |
+          git config user.email "ytzlax@gmail.com"
+          git config user.name "ytzlax"
+      - name: npm version
+        run: |
+          npm version patch
+      - name: git push
+        run: |
+          git commit -m "message"
+          git push  origin master
       env:
         CI: true
