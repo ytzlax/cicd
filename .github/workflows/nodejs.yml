@@ -26,7 +26,7 @@ jobs:
         npm version patch
      - name: git push
        run: |
-              git commit -m "message"
-              git push  origin master
+        git commit -m "message"
+        git push  origin master
       env:
         CI: true
