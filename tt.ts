@@ -9,7 +9,7 @@ const entity = {
 if (entity && entity.location && entity.location.geometry && entity.location.geometry.coordinates) {
   console.log(entity.location.geometry.coordinates)
 }
-//
+////
 //After
 if (entity?.location?.geometry?.coordinates) {
   console.log(entity.location.geometry.coordinates)
